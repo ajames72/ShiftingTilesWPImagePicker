@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "ShiftingTilesWPImagePicker-style.min.css",
+	"sources": [
+		"../../../lib/scss/main.scss",
+		"../../../lib/scss/style/shifting-tiles-wp-imagepicker-style.scss",
+		"../../../lib/scss/style/_variables.scss",
+		"../../../lib/scss/style/_mixins.scss"
+	],
+	"mappings": "ACGA,GAAG,AAAA,qBAAqB,AAErB,iBAAiB,AAClB,CACE,OAAO,CAAE,YAAa,CACtB,MAAM,CCRS,IAAI,CDSnB,KAAK,CCRS,KAAK,CDSpB,AAPH,GAAG,AAAA,qBAAqB,CAStB,GAAG,AACH,CACE,MAAM,CCdS,IAAI,CDenB,KAAK,CCdS,KAAK,CDepB,AAbH,GAAG,AAAA,qBAAqB,CAetB,aAAa,AACb,CACE,QAAQ,CAAE,QAAS,CACnB,MAAM,CClBgB,IAAI,CDmB1B,KAAK,CCnBiB,IAAI,CDqB1B,GAAG,CAAE,GAAI,CACT,WAAW,CCrBQ,GAAG,CDsBtB,OAAO,CAAE,IAAK,CAOf,AA9BH,GAAG,AAAA,qBAAqB,CAetB,aAAa,CAUX,GAAG,AACH,CACE,MAAM,CC3Bc,IAAI,CD4BxB,KAAK,CC5Be,IAAI,CD6BzB",
+	"names": []
+}

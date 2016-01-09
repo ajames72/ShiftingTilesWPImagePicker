@@ -1,0 +1,9 @@
+@mixin icon-position($cell-height)
+{
+  top: -($cell-height);
+}
+
+//@mixin icon-position($cell-height, $margin)
+//{
+//  top: -($cell-height - $margin);
+//}

@@ -85,7 +85,38 @@ module.exports = function(grunt) {
 					out: "dist/js/<%= pkg.name %>.min.js"
 				}
 			}
-		}
+		},
+		sass: {
+			dev: {
+				options: {
+					sourceMap: false
+				},
+				files: {
+					'lib/style/css/<%= pkg.name %>-style.css': 'lib/scss/main.scss'
+				}
+			},
+			dist: {
+				options: {
+					outputStyle: 'compressed',
+					sourceMap: true
+				},
+				files: {
+					'dist/style/css/<%= pkg.name %>-style.min.css': 'lib/scss/main.scss'
+				}
+			}
+		},
+    copy: {
+      main: {
+            files: [
+              {
+                cwd: 'lib/style/images/',  // set working folder / root to copy
+                src: ['*.*'],           // copy all files and subfolders
+                dest: 'dist/style/images/',    // destination folder
+                expand: true           // required when using cwd
+              },
+             ]
+           }
+    }
   });
 
   // These plugins provide necessary tasks.
@@ -95,9 +126,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task.
-  grunt.registerTask('test', ['jshint', 'jasmine']);
-  grunt.registerTask('default', ['jshint', 'jasmine', 'requirejs']);
+  grunt.registerTask('devsass', ['sass:dev']);
+	grunt.registerTask('distsass', ['sass:dist']);
+  grunt.registerTask('test', ['jshint', 'jasmine', 'devsass']);
+  grunt.registerTask('default', ['jshint', 'jasmine', 'requirejs', 'distsass', 'copy']);
 
 };

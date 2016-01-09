@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixins";
+
+div.ajmebc-shifting-tile
+{
+  &.ajmebc-thumbnail
+  {
+    display: inline-block;
+    height: $thumbnail-height;
+    width: $thumbnail-width;
+  }
+
+  img
+  {
+    height: $thumbnail-height;
+    width: $thumbnail-width;
+  }
+
+  .checked-icon
+  {
+    position: absolute;
+    height: $checked-image-dimension;
+    width: $checked-image-dimension;
+    //@include icon-position($thumbnail-height);
+    top: 0px;
+    margin-left: $checked-image-margin;
+    display: none;
+
+    img
+    {
+      height: $checked-image-dimension;
+      width: $checked-image-dimension;
+    }
+  }
+}
